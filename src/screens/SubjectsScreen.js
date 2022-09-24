@@ -1,5 +1,12 @@
 import React from 'react';
-import {View, Text, StyleSheet, FlatList, SafeAreaView} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  SafeAreaView,
+  TouchableOpacity,
+} from 'react-native';
 
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
@@ -8,9 +15,8 @@ import LinearGradient from 'react-native-linear-gradient';
 import COLORS from '../utils/colors';
 import HIND_SILIGURI from '../utils/fonts';
 
-const QuestionAndAnswerScreens = ({navigation, route}) => {
+const SubjectsScreen = ({navigation, route}) => {
   const item = route.params;
-  // console.log('I  T E M ==========>', item);
 
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: COLORS.white}}>
@@ -39,11 +45,20 @@ const QuestionAndAnswerScreens = ({navigation, route}) => {
           {item?.title}
         </Text>
       </View>
+
       <FlatList
-        data={item.questionAndAnswer}
+        data={item.allSubjects}
         renderItem={({item}) => {
           return (
-            <View style={{flex: 1}}>
+            <TouchableOpacity
+              activeOpacity={0.5}
+              onPress={() =>
+                navigation.navigate(
+                  item.quiz ? 'Quiz' : item.subject ? 'Sub' : 'QA',
+                  item,
+                )
+              }
+              style={{flex: 1}}>
               <LinearGradient
                 colors={['#f3f3f3', '#fff', '#f5f5f5']}
                 style={styles.linearGradient}>
@@ -73,7 +88,7 @@ const QuestionAndAnswerScreens = ({navigation, route}) => {
                         color: COLORS.green,
                         fontFamily: HIND_SILIGURI.bold,
                       }}>
-                      {item.questionNo}
+                      {item.subjectNo}
                     </Text>
                   </View>
                 </LinearGradient>
@@ -84,7 +99,7 @@ const QuestionAndAnswerScreens = ({navigation, route}) => {
                       color: COLORS.dark,
                       fontFamily: HIND_SILIGURI.bold,
                     }}>
-                    {item.question}
+                    {item.title}
                   </Text>
                   <Text
                     style={{
@@ -98,13 +113,13 @@ const QuestionAndAnswerScreens = ({navigation, route}) => {
                         fontFamily: HIND_SILIGURI.bold,
                         color: COLORS.green,
                       }}>
-                      উত্তর:{'- '}
+                      মোট:{'- '}
                     </Text>
-                    {item.answer}
+                    {item.total} টি প্রশ্ন ও উত্তর।
                   </Text>
                 </View>
               </LinearGradient>
-            </View>
+            </TouchableOpacity>
           );
         }}
       />
@@ -132,4 +147,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default QuestionAndAnswerScreens;
+export default SubjectsScreen;

@@ -22,18 +22,24 @@ const QuizScreen = ({route, navigation}) => {
   const [userSelected, setUserSelected] = React.useState('');
   const [wrongAnswerColor, setWrongAnswerColor] = React.useState('grey');
 
+  // result
+  const [correctAnsCount, setCorrectAnsCount] = React.useState(0);
+  const [wrongAnsCount, setWrongAnsCount] = React.useState(0);
+
   //   console.log(questionNo);
 
   function findAnswer(arr, userSelected) {
     if (arr[questionNo].answer == userSelected) {
-      setCorrectAnswerColor('green');
+      setCorrectAnswerColor(COLORS.green);
       setUserSelected(userSelected);
-      // console.log('Yuu Selected Currect answer');
+      setCorrectAnsCount(correctAnsCount + 1);
+      // console.log('Yuu Selected Correct answer');
     } else {
       // console.log('Current answer is', arr[questionNo].answer);
-      setCorrectAnswerColor('green');
-      setWrongAnswerColor('red');
+      setCorrectAnswerColor(COLORS.green);
+      setWrongAnswerColor(COLORS.red);
       setUserSelected(arr[questionNo].answer);
+      setWrongAnsCount(wrongAnsCount + 1);
     }
   }
   return (
@@ -56,7 +62,7 @@ const QuizScreen = ({route, navigation}) => {
           style={{
             fontSize: 18,
             color: COLORS.dark,
-            fontFamily: HIND_SILIGURI.semiBold,
+            fontFamily: HIND_SILIGURI.bold,
             marginLeft: 20,
             paddingTop: 5,
           }}>
@@ -87,7 +93,12 @@ const QuizScreen = ({route, navigation}) => {
           প্রশ্ন নাম্বার: {item?.islamicQuiz[questionNo].questionNo}
         </Text>
       </View>
-      <View style={{paddingHorizontal: 20, marginTop: 20, minHeight: 350}}>
+      <View
+        style={{
+          paddingHorizontal: 20,
+          marginTop: 20,
+          minHeight: 325,
+        }}>
         <View style={{minHeight: 80}}>
           <Text
             style={{
@@ -102,7 +113,7 @@ const QuizScreen = ({route, navigation}) => {
         <View
           style={{
             marginTop: 10,
-            marginHorizontal: 10,
+            marginHorizontal: 6,
           }}>
           <TouchableOpacity
             onPress={() =>
@@ -200,27 +211,65 @@ const QuizScreen = ({route, navigation}) => {
           </TouchableOpacity>
         </View>
       </View>
+      <View style={{alignItems: 'center', marginBottom: 10}}>
+        <Text
+          style={{
+            fontSize: 22,
+            fontFamily: HIND_SILIGURI.bold,
+            color: COLORS.dark,
+            borderBottomWidth: 2,
+            borderBottomColor: COLORS.green,
+            marginBottom: 15,
+          }}>
+          মোট: {item.islamicQuiz.length} টি।
+        </Text>
+        <View
+          style={{
+            flexDirection: 'row',
+            width: '80%',
+            justifyContent: 'space-around',
+          }}>
+          <Text
+            style={{
+              fontSize: 20,
+              fontFamily: HIND_SILIGURI.bold,
+              color: COLORS.green,
+            }}>
+            সঠিক: {correctAnsCount} টি।
+          </Text>
+          <Text
+            style={{
+              fontSize: 20,
+              fontFamily: HIND_SILIGURI.bold,
+              color: COLORS.red,
+            }}>
+            ভূল: {wrongAnsCount} টি।
+          </Text>
+        </View>
+      </View>
       <View
         style={{
           flexDirection: 'row',
-          marginTop: 20,
-          paddingHorizontal: 50,
-          justifyContent: 'space-between',
+          marginTop: 30,
+          paddingHorizontal: 30,
+          // justifyContent: 'space-between',
+          justifyContent: 'center',
         }}>
-        <TouchableOpacity
+        {/* <TouchableOpacity
+          activeOpacity={0.6}
           onPress={() => {
             questionNo > 0 ? setQuestionNo(questionNo - 1) : questionNo;
             setCorrectAnswerColor('grey');
 
-            setCorrectAnswerColor(questionNo > 0 ? 'grey' : 'green');
+            setCorrectAnswerColor(questionNo > 0 ? 'grey' : COLORS.green);
             setWrongAnswerColor(questionNo > 0 && 'grey');
-            questionNo > 0 && console.log('prev');
+            // questionNo > 0 && console.log('prev');
           }}
           style={{
             width: 100,
             paddingHorizontal: 10,
             paddingVertical: 10,
-            backgroundColor: 'orange',
+            backgroundColor: COLORS.green,
             borderRadius: 30,
             alignItems: 'center',
           }}>
@@ -232,8 +281,9 @@ const QuizScreen = ({route, navigation}) => {
             }}>
             পূর্ববর্তী
           </Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <TouchableOpacity
+          activeOpacity={0.6}
           onPress={() => {
             questionNo < item?.islamicQuiz.length - 1
               ? setQuestionNo(questionNo + 1)
@@ -248,7 +298,7 @@ const QuizScreen = ({route, navigation}) => {
             width: 100,
             paddingHorizontal: 10,
             paddingVertical: 10,
-            backgroundColor: 'orange',
+            backgroundColor: COLORS.green,
             borderRadius: 30,
             alignItems: 'center',
           }}>

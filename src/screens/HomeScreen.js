@@ -41,9 +41,16 @@ const HomeScreen = ({navigation}) => {
         numColumns={2}
         data={allQuestionsAndAnswers}
         renderItem={({item}) => {
+          //   console.log('Check ----------', item);
           return (
             <TouchableOpacity
-              onPress={() => navigation.navigate('Quiz', item)}
+              activeOpacity={0.5}
+              onPress={() =>
+                navigation.navigate(
+                  item.quiz ? 'Quiz' : item.subject ? 'Sub' : 'QA',
+                  item,
+                )
+              }
               style={styles.list}>
               <View style={styles.header}>
                 <Image style={{width: 65, height: 65}} source={item.img} />
@@ -63,7 +70,7 @@ const HomeScreen = ({navigation}) => {
                     fontSize: 16,
                     color: COLORS.dark,
                     fontFamily: HIND_SILIGURI.semiBold,
-                  }}>{`${item.subject ? 'বিষয়:' : 'মোট:'} ${
+                  }}>{`${item.subject ? 'বিষয়:' : 'মোট প্রশ্ন:'} ${
                   item.total || '০'
                 } টি`}</Text>
               </View>
@@ -80,13 +87,13 @@ const width = Dimensions.get('screen').width / 2 - 30;
 const styles = StyleSheet.create({
   headingText: {
     fontSize: 32,
-    color: COLORS.dark,
+    color: COLORS.green,
     textAlign: 'center',
     fontFamily: HIND_SILIGURI.bold,
   },
   list: {
     width,
-    height: 225,
+    height: 200,
     backgroundColor: COLORS.light,
     borderRadius: 10,
     marginBottom: 20,
@@ -96,7 +103,6 @@ const styles = StyleSheet.create({
     elevation: 4,
   },
   header: {
-    marginTop: 15,
     alignItems: 'center',
   },
   titlePart: {
@@ -104,7 +110,7 @@ const styles = StyleSheet.create({
   },
   cardTitle: {
     fontSize: 18,
-    color: COLORS.dark,
+    color: COLORS.green,
     fontFamily: HIND_SILIGURI.bold,
   },
 });
