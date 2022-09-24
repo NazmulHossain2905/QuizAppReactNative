@@ -12,6 +12,8 @@ import {
 import COLORS from '../utils/colors';
 import HIND_SILIGURI from '../utils/fonts';
 
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
 import allQuestionsAndAnswers from '../questionsAndAnswers/questionsAndAnswers';
 // console.log(allQuestionsAndAnswers[0].questionAndAnswer);
 

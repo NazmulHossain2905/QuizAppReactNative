@@ -9,9 +9,11 @@ import {
 import COLORS from '../utils/colors';
 import HIND_SILIGURI from '../utils/fonts';
 
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
 // import {item?.islamicQuiz} from '../../quizs/item?.islamicQuiz';
 
-const QuizScreen = ({route}) => {
+const QuizScreen = ({route, navigation}) => {
   const item = route.params;
   //   console.log(item.title);
 
@@ -38,16 +40,25 @@ const QuizScreen = ({route}) => {
     <ScrollView style={{flex: 1, backgroundColor: '#fff'}}>
       <View
         style={{
-          height: 60,
+          height: 65,
           backgroundColor: COLORS.white,
-          justifyContent: 'center',
           paddingHorizontal: 20,
+          flexDirection: 'row',
+          alignItems: 'center',
         }}>
+        <AntDesign
+          onPress={() => navigation.goBack()}
+          name="arrowleft"
+          size={30}
+          color={COLORS.dark}
+        />
         <Text
           style={{
             fontSize: 18,
             color: COLORS.dark,
-            fontFamily: HIND_SILIGURI.bold,
+            fontFamily: HIND_SILIGURI.semiBold,
+            marginLeft: 20,
+            paddingTop: 5,
           }}>
           {item?.title}
         </Text>
