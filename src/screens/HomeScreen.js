@@ -12,15 +12,13 @@ import {
 import COLORS from '../utils/colors';
 import HIND_SILIGURI from '../utils/fonts';
 
-import AntDesign from 'react-native-vector-icons/AntDesign';
-
 import allQuestionsAndAnswers from '../questionsAndAnswers/questionsAndAnswers';
 // console.log(allQuestionsAndAnswers[0].questionAndAnswer);
 
 const HomeScreen = ({navigation}) => {
   return (
     <View
-      style={{flex: 1, backgroundColor: COLORS.white, paddingHorizontal: 20}}>
+      style={{flex: 1, backgroundColor: COLORS.white, paddingHorizontal: 17}}>
       <View style={{marginTop: 30, marginBottom: 20, alignItems: 'center'}}>
         <Image
           resizeMode="center"
@@ -82,7 +80,7 @@ const HomeScreen = ({navigation}) => {
   );
 };
 
-const width = Dimensions.get('screen').width / 2 - 30;
+const width = Dimensions.get('screen').width / 2 - 28;
 
 const styles = StyleSheet.create({
   headingText: {
