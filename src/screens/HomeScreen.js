@@ -62,7 +62,7 @@ const HomeScreen = ({navigation}) => {
                     fontFamily: HIND_SILIGURI.semiBold,
                     color: COLORS.dark,
                   }}>
-                  {!item.quiz ? `প্রশ্ন ও উত্তর` : ``}
+                  {!item.quiz ? `প্রশ্ন ও উত্তর` : `কুইজ প্রশ্ন`}
                 </Text>
                 <Text style={styles.cardTitle}>{item.title}</Text>
                 <Text
