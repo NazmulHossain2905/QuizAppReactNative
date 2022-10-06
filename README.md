@@ -6,45 +6,47 @@ This is a Quiz Application for You. You can install this application on your mob
 
 👉 <a href="https://nazmulhossain2905.github.io/nazmulhossain-portfolio/">Download Apk</a>
 
-### APP HOME SCREEN
+You can easily download and install this application. Also you could share this application on your friends.
 
-  <img src='./src/assets/screenshots/s1.jpg' alt='Website Image' width='500'>
+### App Home Screen
 
-### ISLAMIC QUIZ SCREEN
+ <img src='./src/assets/screenshots/s1.jpg' alt='Website Image' width='300'>
 
-<img src='./src/assets/screenshots/s2.jpg' alt='Home' width='500'>
+### Islamic Quiz Screen
 
-### WHEN YOU SELECT A WRONG OPTION
+<img src='./src/assets/screenshots/s2.jpg' alt='Home' width='300'>
 
-<img src='./src/assets/screenshots/s3.jpg' alt='Home' width='500'>
+### When You Select a Wrong Option
 
-### WHEN YOU SELECT A CORRECT OPTION
+<img src='./src/assets/screenshots/s3.jpg' alt='Home' width='300'>
 
-<img src='./src/assets/screenshots/s4.jpg' alt='Home' width='500'>
+### When You Select a Correct Optiion
 
-### ISLAMIC QUESTION AND ANSWER SCREEN
+<img src='./src/assets/screenshots/s4.jpg' alt='Home' width='300'>
 
-<img src='./src/assets/screenshots/s5.jpg' alt='Home' width='500'>
+### Islamic Quiz and Answer Screen
 
-### ABOUT COMPUTER SCREEN
+<img src='./src/assets/screenshots/s5.jpg' alt='Home' width='300'>
 
-<img src='./src/assets/screenshots/s6.jpg' alt='Home' width='500'>
+### About Computer Screen
 
-### BANGLADESH AFFAIRS SCREEN
+<img src='./src/assets/screenshots/s6.jpg' alt='Home' width='300'>
 
-<img src='./src/assets/screenshots/s7.jpg' alt='Home' width='500'>
+### Bangladesh Affairs Screen
 
-### GENERAL KNOWLEDGE BANGLADESH AFFAIRS
+<img src='./src/assets/screenshots/s7.jpg' alt='Home' width='300'>
 
-<img src='./src/assets/screenshots/s8.jpg' alt='Home' width='500'>
+### General Knowledge Bangladesh Arrairs
 
-### SUBJECT OF SCIENCE SCREEN
+<img src='./src/assets/screenshots/s8.jpg' alt='Home' width='300'>
 
-<img src='./src/assets/screenshots/s9.jpg' alt='Home' width='500'>
+### Subject of Science Screen
 
-### OTHERS SCREEN
+<img src='./src/assets/screenshots/s10.jpg' alt='Home' width='300'>
 
-<img src='./src/assets/screenshots/s10.jpg' alt='Home' width='500'>
+### Others Screen
+
+<img src='./src/assets/screenshots/s9.jpg' alt='Home' width='300'>
 
 #### You can easily download and install this application. Also you could share this application on your friends.
 
