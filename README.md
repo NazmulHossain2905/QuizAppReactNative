@@ -20,7 +20,7 @@ You can easily download and install this application. Also you could share this 
 
 <img src='./src/assets/screenshots/s3.jpg' alt='Home' width='300'>
 
-### When You Select a Correct Optiion
+### When You Select a Correct Option
 
 <img src='./src/assets/screenshots/s4.jpg' alt='Home' width='300'>
 
@@ -36,7 +36,7 @@ You can easily download and install this application. Also you could share this 
 
 <img src='./src/assets/screenshots/s7.jpg' alt='Home' width='300'>
 
-### General Knowledge Bangladesh Arrairs
+### General Knowledge Bangladesh Affairs
 
 <img src='./src/assets/screenshots/s8.jpg' alt='Home' width='300'>
 
