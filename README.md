@@ -4,7 +4,7 @@ This is a Quiz Application for You. You can install this application on your mob
 
 ## APP DOWNLOAD LINK
 
-👉 <a target=_blank href="https://apkadmin.com/jkfqefgwvs8k/Quiz.apk.html">Download Apk</a>
+👉 <a href="https://apkadmin.com/jkfqefgwvs8k/Quiz.apk.html" target="_blank">Download Apk</a>
 
 You can easily download and install this application. Also you could share this application on your friends.
 
